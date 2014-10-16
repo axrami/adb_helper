@@ -31,7 +31,7 @@ if ARGV[0] == nil
   usage()
 end
 
-events = {"power" => 26, "menu" => 82, "back" => 4, "home" => 3, "call" => 5, "endcall" => 6, "volup" => 24, "voldown" => 25, "camera" => 27, "explorer" => 62}
+events = {"power" => 26, "menu" => 82, "back" => 4, "home" => 3, "call" => 5, "endcall" => 6, "volup" => 24, "voldown" => 25, "camera" => 27, "explorer" => 64}
 
 devices.each do |device|
   device_ids << device.split("\t")[0]

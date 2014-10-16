@@ -1,18 +1,50 @@
-This will pass commands to all connected devices.
+# adb_helper
 
-Requirements: ADB and Ruby. Place in path usage below.
+----
+## description
 
-ex. $adb_helper.rb power
+> adb_helper will issue adb key event and shell commands to all connected devices
 
-install: input install path as argument
-uninstall: input package name as argument
-wireless: opens debug port and connects, must be on same network
-usb: returns devices to usb mode
-log: prints log to file, provide file name as argument
-pull: copies files to current directory
-kill_all: kills all background processes
-text: arguent is passed as text to device
-open: opens the MainActivity of the package provided
-key: shell input keyevent, pass key number
+----
+## commands
+1.install: will install an apk to connected devices
 
-events: power, menu, back, home, call, endcall, volup, voldown, camera, explorer
+    $adb_helper install ~/Development/android/ecosmart/EcoSmart.apk
+
+
+2.uninstall: input package name as argument
+
+    $adb_helper uninstall com.company.mobile.ecosmart
+
+3.pull: copies files to current directory or specified directory
+
+    $adb_heler pull sdcard/Robotium-Screenshots
+
+4.kill_all: kills all background processes
+
+5.text: pass text to devices
+
+    $adb_helper text hello
+
+6.open: opens the MainActivity of the package provided
+
+    $adb_helper open com.company.mobile.ecosmart
+
+7.key: pass any shell input  keyevent value to execute on all devices
+
+    $adb_helper key 26
+
+##Other acceptable commands
+>No arguments are required and preform the inferred command on devices
+
+    $adb_helper power
+
+1. power
+2. menu
+3. back
+4. home
+5. call
+6. endcall
+7. volup
+8. voldown
+9. explorer
