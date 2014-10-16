@@ -18,7 +18,7 @@
 
 3.pull: copies files to current directory or specified directory
 
-    $adb_heler pull sdcard/Robotium-Screenshots
+    $adb_helper pull sdcard/Robotium-Screenshots
 
 4.kill_all: kills all background processes
 
